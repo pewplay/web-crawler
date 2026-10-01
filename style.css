@@ -1,0 +1,135 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #121221;
+  overscroll-behavior: none;
+}
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Andale Mono', 'Courier New', 'Liberation Mono', monospace;
+  color: #ccc;
+}
+
+#app {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  touch-action: none;
+}
+
+#screen, #touch {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+
+#touch { z-index: 1; }
+
+/* floating joystick, shown only while dragging in game */
+#joy {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 50%;
+  border: 2px solid rgba(153, 204, 68, 0.45);
+  background: rgba(153, 204, 68, 0.06);
+  box-sizing: border-box;
+}
+
+#joy-knob {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 0 -22px;
+  border-radius: 50%;
+  background: rgba(153, 204, 68, 0.35);
+  box-shadow: 0 0 12px rgba(153, 204, 68, 0.5);
+}
+
+#timer {
+  position: absolute;
+  z-index: 2;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  color: #fff;
+  font: bold clamp(18px, 4vmin, 34px) 'Andale Mono', 'Courier New', monospace;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+.hud-btn {
+  position: absolute;
+  z-index: 3;
+  top: max(10px, env(safe-area-inset-top));
+  min-width: 44px;
+  height: 44px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(153, 204, 68, 0.45);
+  border-radius: 6px;
+  background: rgba(10, 10, 22, 0.55);
+  color: #9c4;
+  cursor: pointer;
+  touch-action: manipulation;
+  font: bold 16px 'Andale Mono', 'Courier New', monospace;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+.hud-btn:hover, .hud-btn:focus-visible { opacity: 1; }
+.hud-btn[hidden] { display: none; }
+.hud-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#btn-menu { left: max(10px, env(safe-area-inset-left)); }
+#btn-mute { right: max(10px, env(safe-area-inset-right)); }
+#btn-mute .icon-off { display: none; }
+#btn-mute.muted .icon-on { display: none; }
+#btn-mute.muted .icon-off { display: block; }
+
+#btn-skip {
+  top: auto;
+  bottom: max(14px, env(safe-area-inset-bottom));
+  right: max(14px, env(safe-area-inset-right));
+  padding: 0 16px;
+}
+
+#nogl {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  font-size: 18px;
+  color: #9c4;
+  background: #121221;
+}
+#nogl[hidden] { display: none; }

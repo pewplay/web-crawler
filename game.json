@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
+  "title": "Web Crawler",
+  "description": "Guide a glowing spider bot through 18 rooms of deadly moving lasers to find a missing web page in this free neon game in your browser.",
+  "about": "A hacker hits a 404: the page he wants has been moved again. You are the web crawler he sends after it, a little spider made of light that must scuttle through a private network guarded by eighteen intrusion-prevention rooms full of deadly lasers.\n\nEvery room is a different hand-made trap drawn entirely in a shader: spinning fans, pulsing rings, sliding blocks, rippling waves, fractal patterns and more. Watch the rhythm, wait for a gap and slip through. Touch a laser and you restart from the last green checkpoint line, so progress is steady and each new room feels like a puzzle solved by timing. Four difficulty levels change how fast the traps move, and a hidden speedrun timer is there for the bravest crawlers.\n\nOriginally created by kostik1337 and lampysprites for js13kGames 2020 as eggog CHOCH.",
+  "howToPlay": "Move the spider up the corridor and through each room without touching the red laser shapes. Crossing a green line saves a checkpoint, and touching a laser sends you back to it. Reach the glowing page in the last room to finish the hunt.",
+  "controls": [
+    { "input": "Arrow keys / WASD", "action": "Move the spider, navigate the menu" },
+    { "input": "Drag (touch or mouse)", "action": "Move the spider with a floating joystick" },
+    { "input": "Enter / Tap", "action": "Choose a menu option, skip or start the intro" },
+    { "input": "Esc / Menu button", "action": "Pause and open the menu" },
+    { "input": "T / R", "action": "Toggle the speedrun timer / restart a speedrun" }
+  ],
+  "tips": [
+    "Stop just before each room and watch one full cycle of the trap before moving in.",
+    "The white walls are solid but harmless, so you can rest against them while you wait for a gap.",
+    "If a room feels too fast, lower the difficulty in the menu: it slows down every trap.",
+    "Use resume in the menu to pause safely; your checkpoint is kept."
+  ],
+  "faq": [
+    { "question": "Is Web Crawler free to play?", "answer": "Yes, it is completely free and runs in your browser with no download or sign-up." },
+    { "question": "Can I play Web Crawler on a phone or tablet?", "answer": "Yes, press anywhere and drag to steer with the floating joystick; the view adapts to portrait and landscape. A device with decent graphics performance is recommended because the whole game is drawn by a shader." },
+    { "question": "How long does Web Crawler take to finish?", "answer": "Most players reach the missing page in 10 to 20 minutes, depending on the difficulty and how often they get zapped." }
+  ],
+  "category": "Action",
+  "tags": ["spider", "lasers", "neon", "hacker", "precision", "shader"],
+  "author": "kostik1337 & lampysprites",
+  "playMode": "SinglePlayer",
+  "orientation": "any",
+  "cover": "cover.png",
+  "screenshots": ["screenshots/1.png", "screenshots/2.png", "screenshots/3.png"],
+  "added": "2026-10-01",
+  "draft": false
+}
